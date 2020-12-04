@@ -13,7 +13,7 @@ body{
 
 header, footer{
     color: black;
-    background-color: dodgerblue;
+    background-color: red;
     padding: 30px;
     margin: auto;
 }
@@ -23,17 +23,17 @@ h1, h2, h3{
 }
 
 div{
-    background-color: lightblue;
+    background-color: lightgray;
     padding: 30px;
 }
 
 a{
     text-decoration: none;
-    color: rebeccapurple;
+    color: blue;
     background-color: inherit;
 }
 a:hover{
-    color: mediumpurple;
+    color: darkblue;
     text-decoration: underline;
 }
 
