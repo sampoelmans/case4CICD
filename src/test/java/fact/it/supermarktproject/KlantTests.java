@@ -92,7 +92,7 @@ public class KlantTests {
     public void testToString() {
         Klant donald = new Klant("Donald", "Duck");
         donald.setKlantenkaartnr(9);
-        assertEquals("klantenkaartnr 9", donald.toString());
+        assertEquals("Klant DUCK Donald met klantenkaartnr 9", donald.toString());
     }
 
 }
