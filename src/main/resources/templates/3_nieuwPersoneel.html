@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<!--Ooms Britt r0802207-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Nieuw personeelslid</title>
+</head>
+<body>
+<header>
+    <h1>SupermarktApp</h1>
+    <p>door Britt Ooms</p>
+</header>
+
+<div>
+    <h2>Nieuw personeelslid aanmaken</h2>
+<form action="4_welkomPersoneel">
+    <p>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam" id="voornaam" placeholder="vb: Eric">
+    </p>
+    <p>
+        <label for="familienaam">Familienaam:</label>
+        <input type="text" name="familienaam" id="familienaam" placeholder="vb: Nam">
+    </p>
+    <p>
+        <label for="datum">In dienst sinds (dd/MM/yyyy): </label>
+        <input type="date" name="datum" id="datum" placeholder="vb: 13/06/2013">
+    </p>
+    <p>
+        <input type="submit" name="Registreren"value="Registreer">
+    </p>
+</form>
+</div>
+
+<footer>
+    <p><a href="/">home</a></p>
+</footer>
+</body>
+</html>

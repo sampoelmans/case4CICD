@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<!--Ooms Britt r0802207-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Lijst afdelingen</title>
+</head>
+<body>
+<header>
+    <h1>SupermarktApp</h1>
+    <p>door Britt Ooms</p>
+</header>
+
+<div>
+<h2 th:text="'Dit zijn de afdelingen van supermarkt ' + ${supermarkt.getNaam()}"></h2>
+    <div>
+        <li th:each="afdeling: ${supermarkt.getAfdelingen()}">
+            <h3 th:text="${afdeling.getNaam()}"></h3>
+            <p th:if="${afdeling.isGekoeld() == true}" th:text="${afdeling.getNaam()} + ' - Gekoelde afdeling'"></p>
+            <p th:unless="${afdeling.isGekoeld() == true}" th:text="${afdeling.getNaam()} + ' - Geen koeling'"></p>
+            <p th:text="'Verantwoordelijke: ' + ${afdeling.getVerantwoordelijke().getFamilienaam() + ' ' + afdeling.getVerantwoordelijke().getVoornaam()}"></p>
+            <img onerror="this.src='img/geenFoto.png'" th:src="@{${afdeling.getFoto()}}">
+        </li>
+    </div>
+</div>
+
+<footer>
+    <p><a href="/">home</a></p>
+</footer>
+</body>
+</html>

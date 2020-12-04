@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<!--Ooms Britt r0802207-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Nieuwe afdeling</title>
+</head>
+<body>
+<header>
+    <h1>SupermarktApp</h1>
+    <p>door Britt Ooms</p>
+</header>
+
+<div>
+<h2>Nieuwe afdeling</h2>
+    <form action="/10_lijstAfdeling">
+        <p>
+            <label for="naam">Naam: </label>
+            <input type="text" id="naam" name="naam">
+        </p>
+        <p>
+            <label for="afbeelding">Afbeelding: </label>
+            <input type="text" id="afbeelding" name="afbeelding">
+        </p>
+        <p>
+            <input type="checkbox" id="gekoeld" name="gekoeld">
+            <label for="gekoeld">Gekoeld</label>
+        </p>
+        <p>
+            <label for="verantwoordelijke"></label>
+            <select name="verantwoordelijke" id="verantwoordelijke">
+                <option value="-1">Wie is de verantwoordelijke van deze afdeling?</option>
+                <option th:value="${verantwoordelijkeStat.index}" th:each="verantwoordelijke: ${personeel}"
+                th:text="${verantwoordelijke.getVoornaam()} + ' ' + ${verantwoordelijke.getFamilienaam()}"></option>
+            </select>
+        </p>
+        <p>
+            <label for="supermarkten"></label>
+            <select name="supermarkten" id="supermarkten">
+                <option value="-1">In welke supermarkt wil je een nieuwe afdeling?</option>
+                <option th:value="${supermarktStat.index}" th:each="supermarkt: ${supermarkten}"
+                th:text="${supermarkt.getNaam()}"></option>
+            </select>
+        </p>
+        <p>
+            <button type="submit">Maak de afdeling</button>
+        </p>
+    </form>
+</div>
+
+<footer>
+    <p><a href="/">home</a></p>
+</footer>
+</body>
+</html>

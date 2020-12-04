@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<!--Ooms Britt r0802207-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Verwelkoming klant</title>
+</head>
+<body>
+<header>
+    <h1>SupermarktApp</h1>
+    <p>door Britt Ooms</p>
+</header>
+<div>
+    <h2>Welkom</h2>
+<span th:text="Welkom + ' ' + ${klant.toString()}"></span>
+</div>
+<footer>
+    <p><a href="/">home</a></p>
+</footer>
+</body>
+</html>

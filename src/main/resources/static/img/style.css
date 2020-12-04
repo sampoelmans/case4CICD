@@ -1,0 +1,53 @@
+/*voeg hier je zelfgekozen stylesheet toe*/
+/*Ooms Britt r0802207*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: ghostwhite;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+header, footer{
+    color: black;
+    background-color: dodgerblue;
+    padding: 30px;
+    margin: auto;
+}
+
+h1, h2, h3{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+div{
+    background-color: lightblue;
+    padding: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: rebeccapurple;
+    background-color: inherit;
+}
+a:hover{
+    color: mediumpurple;
+    text-decoration: underline;
+}
+
+footer a{
+    color: black;
+}
+footer a:hover{
+    color: black;
+}
+
+p{
+    padding: 5px;
+}
+
+img{
+    max-width: 250px;
+}
